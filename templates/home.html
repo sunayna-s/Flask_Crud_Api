@@ -3,6 +3,9 @@
     <h1>Add book</h1>
     <form method="POST" action="/">
         <input type="text">name="title">
+        <input type="text">name="authorname"
+        <input type="text">name="publisher"
+        <input type="text">name="index"
         <input type="submit">value="ADD">
     </form>
 
@@ -11,18 +14,32 @@
       {% for book in books %}
         <form>
          <td>
-          {{book.title}}
+             {{book.title}}
+             {{book.authorname}}
+             {{book.publisher}}
+             {{book.index}}
+
          </td>
          <>
            <form method="POST" action="./update" style="..."
                  <input type="hidden" value="{{book.title}}" name="oldtitle">
-                 <input type="text" value="{{book.title}}"name="newtitle">
+                <input type="hidden" value="{{book.authorname}}" name="oldtitle">
+                <input type="hidden" value="{{book.publisher}}" name="oldtitle">
+                <input type="hidden" value="{{book.index}}" name="oldtitle">
+                <input type="text" value="{{book.title}}"name="newtitle">
+                <input type=text" value={{book.authorname}}"name="newtitle">
+                <input type="text" value="{{book.publisher}}"name="newtitle">
+                <input type="text" value="{{book.index}}"name="newtitle">
+
                  <input type="submit" value="Update">
         </form>
       </td>
       <td>
           <form method="POST" action=".?delete" style="...">
               <input type="hidden" value="{{book.title}}" name="title">
+              <input type="hidden" value="{{book.authorname}}" name="authorname">
+              <input type="hidden" value="{{book.publisher}}" name="publisher">
+              <input type="hidden" value="{{book.index}}" name="index">
               <input type="submit" value="Delete">
           </form>
       </td>
