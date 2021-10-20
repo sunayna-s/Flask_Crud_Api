@@ -32,9 +32,9 @@ def home():
     if request.form:
         try:
             book = Book(title=request.form.get("title"))
-            authorname =Authorname
-
+            authorname = Book(authorname=request.form.get("authorname"))
             db.session.add(book)
+            db.session.add(authorname)
             db.session.commit()
         except Exception as e:
             print("Failed to add book")
