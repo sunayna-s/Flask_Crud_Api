@@ -33,8 +33,12 @@ def home():
         try:
             book = Book(title=request.form.get("title"))
             authorname = Book(authorname=request.form.get("authorname"))
+            publisher = Book(publisher=request.form.get("publisher"))
+            index =Book(index=request.form.get("index"))
             db.session.add(book)
             db.session.add(authorname)
+            db.session.add(publisher)
+            db.session.add(index)
             db.session.commit()
         except Exception as e:
             print("Failed to add book")
@@ -48,7 +52,13 @@ def update():
         newtitle = request.form.get("newtitle")
         oldtitle = request.form.get("oldtitle")
         book = Book.query.filter_by(title=oldtitle).first()
+        authorname = Book.query.filter_by(authorname=oldtitle).first()
+        publisher = Book.query.filter_by(publisher=oldtitle).first()
+        index = Book.query.filter_by(index=oldtitle).first()
         book.title = newtitle
+        book.authorname = newauthorname
+        book.publisher = newpublisher
+        book.index = newindex
         db.session.commit()
     except Exception as e:
         print("Couldn't update book title")
@@ -60,7 +70,13 @@ def update():
 def delete():
     title = request.form.get("title")
     book = Book.query.filter_by(title=title).first()
+    authorname = Book.query.filter_by(authorname=authorname).first()
+    publiher = Book.query.filter_by(publisher=publisher).first()
+    index = Book.query.filter_by(index).first()
     db.session.delete(book)
+    db.session.delete(authorname)
+    db.session.delete(publisher)
+    db.session.delete(index)
     db.session.commit()
     return redirect("/")
 
