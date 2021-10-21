@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0d53a029-442e-4439-8f19-f09c742b6886" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookmanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookmanager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -2,17 +2,18 @@
 <body>
     <h1>Add book</h1>
     <form method="POST" action="/">
-        <input type="text">name="title">
-        <input type="text">name="authorname"
-        <input type="text">name="publisher"
-        <input type="text">name="index"
-        <input type="submit">value="ADD">
+        <input type="text" name="title">
+        <input type="text" name="authorname">
+
+<!--        <input type="text" name="publisher">-->
+<!--        <input type="text" name="index">-->
+        <input type="submit" value="Add">
     </form>
 
-  <h1>Books<h1>
+  <h1>Books</h1>
   <table>
       {% for book in books %}
-        <form>
+        <tr>
          <td>
              {{book.title}}
              {{book.authorname}}
@@ -20,9 +21,9 @@
              {{book.index}}
 
          </td>
-         <>
-           <form method="POST" action="./update" style="..."
-                 <input type="hidden" value="{{book.title}}" name="oldtitle">
+         <td>
+           <form method="POST" action="./update" style="...">
+                <input type="hidden" value="{{book.title}}" name="oldtitle">
                 <input type="hidden" value="{{book.authorname}}" name="oldtitle">
                 <input type="hidden" value="{{book.publisher}}" name="oldtitle">
                 <input type="hidden" value="{{book.index}}" name="oldtitle">
@@ -32,7 +33,7 @@
                 <input type="text" value="{{book.index}}"name="newtitle">
 
                  <input type="submit" value="Update">
-        </form>
+        </tr>
       </td>
       <td>
           <form method="POST" action=".?delete" style="...">

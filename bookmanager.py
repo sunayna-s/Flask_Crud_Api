@@ -17,10 +17,10 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
 class Book(db.Model):
-    title =db.column(db.String(80), unique=True, nullable=False, primary_key=True)
-    authorname =db.column(db.string, unique=True, nullable=False, Primary_key=True)
-    publisher =db.column(db.string(80) ,unique=True, nullable=False, Primary_key=True)
-    index =db.column(db.string(150) ,unique=True, nullable=False, Primary_key=True)
+    title =db.Column(db.String(80), unique=True, nullable=False, primary_key=True)
+    authorname =db.Column(db.String, unique=True, nullable=False, Primary_key=True)
+    publisher =db.Column(db.String(80), unique=True, nullable=False, Primary_key=True)
+    index =db.Column(db.String(150), unique=True, nullable=False, Primary_key=True)
 
     def __repr__(self,title, authorname, publisher, index):
         return "<Title: {}>","<authorname: {}>" ,"<publisher: {}>", "<index: {}>".format(self.title,self.authorname,self.publisher,self.index)
